@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Ajar Interaktif: Sistem Digital (Minggu 1-14)</title>
+  <meta name="description" content="Media ajar interaktif perkuliahan Sistem Digital berbasis HTML5. Fitur unggulan modul konversi bilangan Central Binary Hub, pengelompokan 4-bit heksa, 3-bit oktal, dan silabus terstruktur Minggu 1 s.d. 14.">
+  <meta name="keywords" content="Sistem Digital, Konversi Biner, Heksadesimal, Oktal, Desimal, 2's Complement, ITERA, Media Ajar Interaktif HTML5">
+  
+  <!-- Favicon / Digital Circuit Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2306b6d4'/><text x='50%' y='68%' font-size='55' font-family='monospace' font-weight='bold' fill='%23042f2e' text-anchor='middle'>01</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Topbar Header -->
+  <header class="topbar">
+    <div class="brand-wrapper">
+      <button class="btn-icon mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Buka Menu Navigasi">
+        ☰
+      </button>
+      <div class="brand-icon">01</div>
+      <div class="brand-info">
+        <h1>SISTEM DIGITAL</h1>
+        <span>Media Ajar Interaktif ITERA</span>
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <div class="current-week-badge" id="current-week-indicator">
+        <span class="pulse-dot"></span> Minggu 1 dari 14
+      </div>
+
+      <button class="btn-icon" id="theme-toggle-btn" title="Ganti Tema Tampilan">
+        ☀️
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="app-container">
+
+    <!-- Sidebar: Navigasi Minggu 1 - 14 -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-header-title">
+          <span>Modul Perkuliahan</span>
+          <span class="weeks-count">14 Pekan</span>
+        </div>
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-topics" class="search-input" placeholder="Cari topik / materi..." aria-label="Cari materi">
+        </div>
+      </div>
+
+      <ul class="weeks-list" id="weeks-nav-list">
+        <!-- Generated dynamically by js/app.js -->
+      </ul>
+
+      <div style="margin-top: auto; padding: 1rem 1.25rem; border-top: 1px solid var(--border-glass); font-size: 0.75rem; color: var(--text-dim);">
+        <div><strong>Tim Dosen Pengampu:</strong></div>
+        <div>• Dr. Swadexi Istiqphara, S.T., M.T.</div>
+        <div>• Efa Maydhona, S.T., M.T.</div>
+        <div>• Nia Saputri Utami, S.T., M.T.</div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="main-content">
+      <!-- Horizontal Submenu Tabs for the Active Week -->
+      <nav class="week-tabs-bar" id="week-tabs-bar" aria-label="Submenu Materi Pekan Ini">
+        <!-- Generated dynamically by js/app.js -->
+      </nav>
+
+      <!-- Dynamic Content Injection Container -->
+      <section id="main-content-display">
+        <!-- Rendered based on active week and submenu -->
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Application Logic Scripts -->
+  <script src="js/weeks-data.js"></script>
+  <script src="js/central-binary.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
